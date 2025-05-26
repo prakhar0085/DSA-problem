@@ -3,7 +3,7 @@ class Solution {
         int lp = 0;
         int rp = height.length-1;
         int maxwater = 0;
-        while(lp < rp){
+        while(lp != rp){
             int h = Math.min(height[lp] , height[rp]);
             int width = rp - lp;
             int currwater = h * width;
