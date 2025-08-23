@@ -35,6 +35,11 @@ class Solution {
             if(currNode == null){
                mainList.add(new ArrayList<>(currlevel));
                currlevel.clear();
+            //new ArrayList<>(currentLevel):
+            // new ArrayList<>(): Creates a brand new ArrayList object
+            // currentLevel: This is passed as a parameter to the constructor
+            // Copy Constructor: ArrayList<>(Collection c) creates a new list containing all elements 
+            // from the provided collection
                 if(q.isEmpty()){
                     break;
                 }else{
