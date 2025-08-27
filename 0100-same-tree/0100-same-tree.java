@@ -15,10 +15,11 @@
  */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {
+        //// Fix: Handle both null case first
         if(p == null && q == null){
             return true;
         }
-
+        // // Then handle one null case
         if(p == null || q == null){
             return false;
         }
