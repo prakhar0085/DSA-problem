@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Solution {
+    public String removeDuplicates(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (!stack.isEmpty() && stack.peek() == c) {
+                stack.pop(); // remove duplicate
+            } else {
+                stack.push(c); // add character
+            }
+        }
+
+        // build result from stack
+        StringBuilder result = new StringBuilder();
+        for (char c : stack) {
+            result.append(c);
+        }
+
+        return result.toString();
+    }
+}
